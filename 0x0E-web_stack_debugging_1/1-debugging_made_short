@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# configure an Nginx server to isten on port 80.
+
+# Create a symbolic link (-s option) between the Nginx Configuration file and 
+# the enabled site Directory
+
+
+ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+# restart Nginx
+service nginx start
+
+# terminate the first  Nginx process ID
+kill "$(pgrep 'nginx' | head -1)"
+
