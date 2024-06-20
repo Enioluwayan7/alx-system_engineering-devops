@@ -1,3 +1,6 @@
+#!/usr/bin/python3
+"""uses REddit API to get 10 hot posts """
+
 import requests
 
 def top_ten(subreddit):
