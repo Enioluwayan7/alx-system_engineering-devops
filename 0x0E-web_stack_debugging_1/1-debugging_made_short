@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Configure an Nginx server to isten on port 80.
-apt-get -y update
-apt-get install -y nginx
-sudo service nginx start
+# configure Nginx to listen on port 80 for all active IPv4 IPs
+cat /etc/nginx/sites-available/default >  /etc/nginx/sites-enabled/default
+sudo service nginx restart
+rm /run/nginx.pid
