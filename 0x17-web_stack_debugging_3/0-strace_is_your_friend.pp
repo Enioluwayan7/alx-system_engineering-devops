@@ -1,6 +1,7 @@
-#fixes bad "phpp" extension to "php" in "wp-settings.php"
+# a puppet code that fixes a word press site 5xx error to 200 ok
+# fixes bad "phpp" extension to "php" in "wp-settings.php"
 
 exec{'fix-wordpress':
-	command => 'sed -i s/phpp/php/g /var/www/html/wp-settings.php',
-	path	=> '/usr/local/bin/:/bin/'
+    command => 'sed -i s/phpp/php/g /var/www/html/wp-settings.php',
+    path    => '/usr/local/bin/:/bin/',
 }
